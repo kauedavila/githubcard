@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 export default function Card() {
   const logo = "/assets/logo.png";
-  const [data, setData] = useState({});
+  const [data, setData]:any = useState({});
   const [user, setUser] = useState("kauedavila");
   const [text, setText] = useState("");
 
@@ -35,7 +35,7 @@ export default function Card() {
             type="submit"
             value={text}
             className="bg-white border-2"
-            onClick={(e) => {
+            onClick={(e:) => {
               e.preventDefault();
               setUser(e.target.value);
             }}
@@ -46,12 +46,12 @@ export default function Card() {
       </div>
 
       <div className="flex flex-col justify-between py-10 pl-4 bg-[#0E1218] border-black border-x-[1vw] border-y-[3vh] w-[30vw] h-[80vh] rounded-[50px] overflow-hidden">
-        <span className="text-white text-3xl">{data.name}</span>
+        <span className="text-white text-3xl">{data?.name}</span>
 
         <div className="grid grid-cols-1">
           <div className="flex justify-end row-start-1 row-end-3 col-[1] ">
             <img
-              src={data.avatar_url}
+              src={data?.avatar_url}
               alt="Profile"
               className="relative left-10 rounded-full border-8 border-white"
             />
