@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 export default function Card() {
   const logo = "/assets/logo.png";
-  const [data, setData]:any = useState({});
+  const [data, setData]: any = useState({});
   const [user, setUser] = useState("kauedavila");
   const [text, setText] = useState("");
 
@@ -35,7 +35,7 @@ export default function Card() {
             type="submit"
             value={text}
             className="bg-white border-2"
-            onClick={(e:) => {
+            onClick={(e: any) => {
               e.preventDefault();
               setUser(e.target.value);
             }}
